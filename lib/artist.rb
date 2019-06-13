@@ -12,6 +12,7 @@ Artist
     has many genres, through songs (FAILED - 3)
 =end
 require 'pry'
+
 class Artist 
     attr_accessor :name, :genre
     @@all = []
