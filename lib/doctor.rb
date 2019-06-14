@@ -11,6 +11,7 @@
   #patients
     has many patients, through appointments (FAILED - 3)
 =end
+require 'pry'
 
 class Doctor
   attr_accessor :name 
@@ -25,8 +26,12 @@ class Doctor
     @@all
   end
   
-  def new_appointment(patient, date)
-    Appointment.new(date, patient, self)
+  def new_appointment(date, patient)  
+    # date == #<Patient:0x000000000176e430 @name="Devin Townsend">
+    # patient == "Friday, January 32nd"
+    # self == #<Doctor:0x000000000176e4a8 @name="The Doctor">
+    # binding.pry
+    Appointment.new(patient, date, self)
   end
   
   def appointments

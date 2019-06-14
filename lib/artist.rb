@@ -24,7 +24,7 @@ class Artist
     # binding.pry
     
     def songs
-      Song.all.select {|song| song.artist == self}
+      Song.all.select {|song| song.artist == self} # .select returns a new array caontaining all elements
     end
     
     def genres
